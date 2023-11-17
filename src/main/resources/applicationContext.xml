@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="studentbean" class="com.springboot.springbootbackendapplication.Student">
+        <property name="name" value="Yelias Ahmed">
+        </property>
+    </bean>
+    <bean id="studentbean1" class="com.springboot.springbootbackendapplication.Student">
+        <property name="name" value="Jannatul Ferdous Naznin">
+        </property>
+    </bean>
+
+    <bean id="a1" class="com.springboot.springbootbackendapplication.Answer">
+        <constructor-arg value="1">
+        </constructor-arg>
+        <constructor-arg value="Programming Language">
+        </constructor-arg>
+        <constructor-arg value="By Isra">
+        </constructor-arg>
+    </bean>
+
+    <bean id="a2" class="com.springboot.springbootbackendapplication.Answer">
+        <constructor-arg value="2">
+        </constructor-arg>
+        <constructor-arg value="Platform">
+        </constructor-arg>
+        <constructor-arg value="By Yusra">
+        </constructor-arg>
+    </bean>
+
+    <bean id="q" class="com.springboot.springbootbackendapplication.Question">
+        <constructor-arg value="1">
+        </constructor-arg>
+        <constructor-arg value="What is Java?">
+        </constructor-arg>
+        <constructor-arg >
+            <list>
+                <ref bean="a1"/>
+                <ref bean="a2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
